@@ -1,0 +1,35 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  link?: string;
+  icon?: string;
+}
+
+const { title, description, link, icon } = Astro.props;
+---
+
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200 dark:border-gray-700">
+  {icon && (
+    <div class="text-2xl mb-4 text-blue-600 dark:text-blue-400">
+      {icon}
+    </div>
+  )}
+  <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+    {title}
+  </h3>
+  <p class="text-gray-600 dark:text-gray-300 mb-4">
+    {description}
+  </p>
+  {link && (
+    <a 
+      href={link} 
+      class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors"
+    >
+      Learn more
+      <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  )}
+</div>

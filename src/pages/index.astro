@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Home" description="Teague Evans - Software Engineer at University of Montana specializing in Software Engineering and Low-Resource Language Translation Using LLMs">
+  <Header 
+    title="Teague Evans" 
+    subtitle="Software Engineer specializing in LLM applications for low-resource language translation" 
+  />
+  
+  <section class="mb-16 text-center">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-4">
+        University of Montana • Missoula, Montana
+      </p>
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+        I'm a Software Engineer passionate about bridging language barriers through artificial intelligence. 
+        My research focuses on developing efficient LLM solutions for low-resource language translation, 
+        making communication accessible across diverse linguistic communities.
+      </p>
+    </div>
+  </section>
+
+  <section class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    <Card
+      title="Projects"
+      description="Explore my research projects and software engineering work in LLM applications and language technology."
+      link="/projects/"
+      icon="🚀"
+    />
+    <Card
+      title="Contact"
+      description="Get in touch for collaborations, research opportunities, or technical discussions."
+      link="/contact/"
+      icon="📧"
+    />
+  </section>
+
+  <section class="mt-16 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">Research Interests</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Software Engineering</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Building robust, scalable systems with modern software development practices and architectures.
+        </p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Low-Resource Language Translation</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Developing LLM-based solutions for languages with limited digital resources and training data.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
